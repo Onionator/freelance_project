@@ -16,4 +16,5 @@ class Product < ApplicationRecord
     p most_reviewed
     where(id: most_reviewed.id)
   }
+  scope :made_in_usa, -> { where(country_of_origin: "USA") }
 end

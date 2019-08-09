@@ -1,3 +1,8 @@
+<div class="navbar">
+<%= link_to "Home", root_path %>
+<%= link_to "All Products", products_path %>
+</div>
+
 <h1><%= @product.name %></h1>
 <h2>Now only $<%= @product.cost %>!</h2>
 <h2>Made in <%= @product.country_of_origin %></h2>
