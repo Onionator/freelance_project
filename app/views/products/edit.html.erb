@@ -1,0 +1,7 @@
+<h1><%= @product.name %></h1>
+
+<%= render "layouts/product_form" %>
+
+<%= link_to "Delete Product", product_path(@product.id), :method => "delete" %>
+
+<%= link_to "Return to Product Page", product_path(@product.id) %>
