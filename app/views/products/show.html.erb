@@ -1,0 +1,13 @@
+<%= @product.name %>
+
+<% if @product.reviews.any? %>
+  <% @product.reviews.each do |review| %>
+    <ul>
+      <li><%= review.rating %> Stars - <%= review.author %></li>
+    </ul>
+  <% end %>
+<% else %>
+  <p>This product doesn't have any reviews. You could be the first to leave a review.</p>
+<% end %>
+
+<%= redirect_to "Products Page", products_path %>

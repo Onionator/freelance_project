@@ -1,0 +1,9 @@
+<% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= redirect_to product.name, product_path(product.id) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>We're sorry we don't currently have any products available.</p>
+<% end %>
