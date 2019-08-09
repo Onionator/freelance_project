@@ -2,4 +2,6 @@
 
 <p><%= @review.content_body %></p>
 
+<%= link_to "Edit Review", edit_product_review_path(@review.product_id, @review.id) %>
+
 <%= link_to "Return to Product Page", product_path(@product.id) %>
