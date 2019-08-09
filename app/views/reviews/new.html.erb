@@ -1,0 +1,5 @@
+<h1>Leave a review for <%= @product.name %>.</h1>
+
+<%= render "layouts/review_form" %>
+
+<%= link_to "Cancel Review", product_path(@product.id) %>

@@ -1,25 +1,26 @@
 class ReviewsController < ApplicationController
   def index
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:product_id])
     @reviews = @product.reviews.all
     render :index
   end
   def new
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:product_id])
     @review = @product.reviews.new
     render :new
   end
   def create
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:product_id])
     @review = @product.reviews.new(review_params)
     if @review.save
-      redirect_to product_path(params[@product.id])
+      redirect_to product_path(@product.id)
     else
       render :new
     end
   end
   def show
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.find(params[:id])
     render :show
   end
   def edit
@@ -37,7 +38,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to product_path(@review.product_id])
+    redirect_to product_path(@review.product_id)
   end
   private
     def review_params

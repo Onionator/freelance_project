@@ -1,9 +1,11 @@
-<%= @product.name %>
+<h1><%= @product.name %></h1>
+<h2>Now only $<%= @product.cost %>!</h2>
+<h2>Made in <%= @product.country_of_origin %></h2>
 
 <% if @product.reviews.any? %>
   <% @product.reviews.each do |review| %>
     <ul>
-      <li><%= review.rating %> Stars - <%= review.author %></li>
+      <li><%= link_to "#{review.rating} Stars - #{review.author}", product_review_path(review.product_id, review.id) %></li>
     </ul>
   <% end %>
 <% else %>
@@ -11,4 +13,7 @@
 <% end %>
 
 <%= link_to "Edit this product", edit_product_path %>
+<br>
+<%= link_to "Leave a Review", new_product_review_path(@product.id) %>
+<br>
 <%= link_to "Products Page", products_path %>
