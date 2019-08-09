@@ -1,0 +1,11 @@
+<h1>Mario's Specialty Food Products</h1>
+
+<% if @products.any? %>
+  <ul>
+    <%= @products.each do |product| %>
+      <li><%= product.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Mario's is so popular that it sold out of everything and you were too slow get get anything. Try being faster next time.</p>
+<% end %>
