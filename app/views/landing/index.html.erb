@@ -7,7 +7,8 @@
       <li><%= link_to product.name, product_path(product.id) %></li>
     <% end %>
   </ul>
-  <h2>Mario's Most Reviewed</h2>
+  <h2>Mario's Most Reviewed Product</h2>
+  <p><%= link_to @most_reviewed_product.first.name, product_path(@most_reviewed_product.first.id) %></p>
 <% else %>
   <p>Mario's is so popular that it sold out of everything and you were too slow get get anything. Try being faster next time.</p>
 <% end %>
