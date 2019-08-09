@@ -4,7 +4,6 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :name
       t.float :cost
       t.string :country_of_origin
-      t.timestamps
     end
   end
 end
