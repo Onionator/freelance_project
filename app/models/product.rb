@@ -11,10 +11,11 @@ class Product < ApplicationRecord
         most_reviewed = product
       end
     end
-    p most_reviewed.id
-    p most_reviewed.name
-    p most_reviewed
     where(id: most_reviewed.id)
   }
   scope :made_in_usa, -> { where(country_of_origin: "USA") }
+
+  validates :name, presence: true
+  validates :cost, presence: true
+  validates :country_of_origin, presence: true
 end

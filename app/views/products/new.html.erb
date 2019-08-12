@@ -2,4 +2,13 @@
 
 <%= render "layouts/product_form" %>
 
+<% if @product.errors.any? %>
+  <h3>Fix your errors.</h3>
+  <ul>
+    <% @product.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+  </ul>
+<% end %>
+
 <%= link_to "Cancel", products_path %>

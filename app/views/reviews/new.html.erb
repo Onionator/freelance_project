@@ -2,4 +2,13 @@
 
 <%= render "layouts/review_form" %>
 
+<% if @review.errors.any? %>
+  <h3>Fix your errors.</h3>
+  <ul>
+    <% @review.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+  </ul>
+<% end %>
+
 <%= link_to "Cancel Review", product_path(@product.id) %>
