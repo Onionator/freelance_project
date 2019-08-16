@@ -3,25 +3,29 @@
 <span id="thisPage"><%= link_to "All Products", products_path, id: "selected" %></span>
 </div>
 
-
 <div id="all_products">
   <button id="usa_only" type="button" name="button">Display Made in USA Only</button>
   <% if @products.any? %>
     <ul>
       <% @products.each do |product| %>
-        <li><%= link_to product.name, product_path(product.id) %></li>
+      <div class="productList">
+        <li class="product"><%= link_to product.name, product_path(product.id), class: 'products' %></li>
+        </div>
       <% end %>
     </ul>
   <% else %>
     <p>We're sorry we don't currently have any products available.</p>
   <% end %>
 </div>
+</div>
 <div id="usa_products">
   <button id="display_all" type="button" name="button">Display All Products</button>
   <% if @usa_products.any? %>
     <ul>
       <% @usa_products.each do |product| %>
-        <li><%= link_to product.name, product_path(product.id) %></li>
+      <div class="productList">
+        <li class="product"><%= link_to product.name, product_path(product.id), class: 'products' %></li>
+      </div>
       <% end %>
     </ul>
   <% else %>

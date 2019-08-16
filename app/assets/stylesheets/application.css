@@ -9,10 +9,6 @@ a {
   color: #131516;
 }
 
-body {
-  align-content: center;
-}
-
 li {
   list-style: none;
 }
@@ -68,6 +64,28 @@ li {
 .read {
   color: #131516;
   font-weight: bold;
+}
+
+.productList {
+  display: inline-flex;
+  margin: 15px;
+  width: 40%;
+}
+
+.products {
+  background-color: white;
+  border: 3px solid #7CCAF4;
+  border-bottom: 10px solid #7CCAF4;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  color: #7CCAF4;
+  font-size: 20px;
+  padding: 5px;
+  padding-bottom: 0px;
+}
+
+.product {
+  min-width: 260px;
 }
 
 .review a {
