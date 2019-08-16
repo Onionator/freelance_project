@@ -1,10 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
-    render :index
-  end
-  def filter
-    @products = Product.made_in_usa
+    @usa_products = Product.made_in_usa
     render :index
   end
   def new
