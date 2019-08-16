@@ -9,16 +9,34 @@ a {
   color: #131516;
 }
 
+body {
+  align-content: center;
+}
+
 li {
   list-style: none;
 }
 
+.navbar {
+  background-color: #ec96a4;
+  font-size: 40px;
+  padding: 12px;
+}
+
+.lowerNavLink {
+  background-color: #7CCAF4;
+  border: 2px solid #131516;
+  border-radius: 5px;
+  display: inline-flex;
+  max-width: 120px;
+  padding: 5px;
+  text-align: center;
+}
 
 .navbar a {
   padding: 10px;
   text-decoration: none;
   font-size: 32px;
-
 }
 
 .container {
@@ -28,7 +46,8 @@ li {
 
 .review {
   background-color: #f2f3f4;
-  border-radius: 5px;
+  border-radius: 10px;
+  padding-top: 3px;
   width: 400px;
 }
 
@@ -44,6 +63,21 @@ li {
 .read {
   color: #131516;
   font-weight: bold;
+}
+
+.review a {
+  background-color: #7CCAF4;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 10px;
+  color: white;
+  font-size: 20px;
+  padding: 3px;
+  padding-right: 5px;
+
+}
+
+.navSelect {
+  color: #9a9eab;
 }
 
 #usa_products {

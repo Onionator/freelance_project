@@ -8,7 +8,7 @@ $(document).ready(function() {
     $('#all_products').toggle()
   })
   $('.more_content').on("click", function(event) {
-    $(this).parent().children('.more_content').toggle()
+    $(this).parent().children('.more_content').slideUp()
     $(this).parent().children('.less_content').toggle()
   })
   $('.less_content').click(function(event) {
