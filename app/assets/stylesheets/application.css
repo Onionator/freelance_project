@@ -2,21 +2,48 @@ h1 {
   color: #131516;
 }
 
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #131516;
+}
+
+li {
+  list-style: none;
+}
+
+
+.navbar a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 32px;
+
+}
+
 .container {
-  color: #555f61;
+  color: #373d3f;
+  margin: 10px;
 }
 
 .review {
-  background-color: #fffee6;
-  width: 300px;
+  background-color: #f2f3f4;
+  border-radius: 5px;
+  width: 400px;
 }
 
 .more_content {
   display: none;
+  color: #373d3f;
 }
 
 .less_content {
+  color: #555f61;
+}
 
+.read {
+  color: #131516;
+  font-weight: bold;
 }
 
 #usa_products {

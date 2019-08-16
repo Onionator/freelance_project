@@ -7,14 +7,13 @@ $(document).ready(function() {
     $('#usa_products').toggle()
     $('#all_products').toggle()
   })
-  $('.more').on("click", function(event) {
-    console.log(this);
-    $('.more_content').toggle()
-    $('.less_content').toggle()
+  $('.more_content').on("click", function(event) {
+    $(this).parent().children('.more_content').toggle()
+    $(this).parent().children('.less_content').toggle()
   })
-  $('.less').click(function(event) {
-    $('.more_content').toggle()
-    $('.less_content').toggle()
+  $('.less_content').click(function(event) {
+    $(this).parent().children('.more_content').slideDown()
+    $(this).parent().children('.less_content').toggle()
   })
   event.preventDefault()
 })
