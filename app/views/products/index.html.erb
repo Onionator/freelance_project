@@ -5,15 +5,31 @@
 <%= link_to "All Products - You are here", products_path %>
 </div>
 
-<% if @products.any? %>
-  <ul>
-    <% @products.each do |product| %>
-      <li><%= link_to product.name, product_path(product.id) %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>We're sorry we don't currently have any products available.</p>
-<% end %>
+
+<div id="all_products">
+  <button id="usa_only" type="button" name="button">Display Made in USA Only</button>
+  <% if @products.any? %>
+    <ul>
+      <% @products.each do |product| %>
+        <li><%= link_to product.name, product_path(product.id) %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>We're sorry we don't currently have any products available.</p>
+  <% end %>
+</div>
+<div id="usa_products">
+  <button id="display_all" type="button" name="button">Display All Products</button>
+  <% if @usa_products.any? %>
+    <ul>
+      <% @usa_products.each do |product| %>
+        <li><%= link_to product.name, product_path(product.id) %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>We're sorry we don't currently have any products made in USA available.</p>
+  <% end %>
+</div>
 
 <%= link_to "Add a new product", new_product_path %>
 <br>

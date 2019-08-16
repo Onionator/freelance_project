@@ -13,7 +13,7 @@ class Product < ApplicationRecord
     end
     where(id: most_reviewed.id)
   }
-  scope :made_in_usa, -> { where(country_of_origin: "United States%") }
+  scope :made_in_usa, -> { where("country_of_origin like ?", "United State%") }
 
   validates :name, presence: true
   validates :cost, presence: true
