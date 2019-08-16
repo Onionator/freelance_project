@@ -9,8 +9,16 @@
 
 <% if @product.reviews.any? %>
   <% @product.reviews.each do |review| %>
+  <% partial_review = review.content_body.truncate_words(6) %>
     <ul>
-      <li><%= link_to "#{review.rating} Stars - #{review.author}", product_review_path(review.product_id, review.id) %></li>
+      <li class="review"><%= link_to "#{review.rating} Stars - #{review.author}", product_review_path(review.product_id, review.id) %><br>
+        <div class="less_content">
+          <%= partial_review %><br><span class="more">Read More</span>
+        </div>
+        <div class="more_content">
+          <%= review.content_body %><br><span class="less">Read Less</span>
+        </div>
+      </li>
     </ul>
   <% end %>
 <% else %>

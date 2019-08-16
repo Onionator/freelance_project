@@ -10,7 +10,7 @@ Review.destroy_all
   rand(3...13).times do
     product.reviews.create!(
       :author => Faker::TvShows::Simpsons.character,
-      :content_body => Faker::TvShows::Simpsons.quote,
+      :content_body => Faker::TvShows::Simpsons.quote + " " + Faker::Lorem.paragraph,
       :rating => rand(1...5)
     )
   end
