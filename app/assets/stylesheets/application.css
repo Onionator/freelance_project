@@ -1,3 +1,12 @@
+h1 {
+  color: #131516;
+}
+
+.container {
+  background-color: #fffee6;
+  color: #555f61;
+}
+
 #usa_products {
   display: none;
 }
