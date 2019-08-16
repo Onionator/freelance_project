@@ -6,17 +6,19 @@
 <h1>Mario's Specialty Food Products</h1>
 
 <h2>About Mario's</h2>
-<p>Mario's is probably the newest food fad.</p>
+<p>Mario's is probably the newest food fad. You could learn more about us if you wanted to, but there really isn't that much to us. I would recommend spending your time doing something more productive. Also you should invest in medium risk mutual funds.</p>
 
 <% if @products.any? %>
   <h2>Mario's Three Newest Creations</h2>
   <ul>
     <% @products.each do |product| %>
-      <li><%= link_to product.name, product_path(product.id) %></li>
+    <div class="productTop">
+      <li class="product"><%= link_to product.name, product_path(product.id), class: 'products' %></li>
+      </div>
     <% end %>
   </ul>
   <h2>Mario's Most Reviewed Product</h2>
-  <p><%= link_to @most_reviewed_product.first.name, product_path(@most_reviewed_product.first.id) %></p>
+  <p class="product"><%= link_to @most_reviewed_product.first.name, product_path(@most_reviewed_product.first.id), class: 'products' %></p>
 <% else %>
   <p>Mario's is so popular that it sold out of everything and you were too slow get get anything. Try being faster next time.</p>
 <% end %>

@@ -52,6 +52,10 @@ li {
   width: 400px;
 }
 
+.productTop {
+  margin: 25px;
+}
+
 .more_content {
   display: none;
   color: #373d3f;
