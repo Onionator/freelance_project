@@ -3,6 +3,10 @@ class ProductsController < ApplicationController
     @products = Product.all
     render :index
   end
+  def filter
+    @products = Product.made_in_usa
+    render :index
+  end
   def new
     @product = Product.new
     render :new

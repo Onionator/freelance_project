@@ -3,7 +3,7 @@ Review.destroy_all
 
 25.times do
   product = Product.create!(
-    :name => Faker::Dessert.variety,
+    :name => Faker::Food.dish,
     :cost => rand(1.5...20).round(2),
     :country_of_origin => Faker::Address.country
   )

@@ -3,6 +3,7 @@
 <div class="navbar">
 <%= link_to "Home", root_path %>
 <%= link_to "All Products - You are here", products_path %>
+<%= link_to "Made in USA only", products_path, method: :filter %>
 </div>
 
 <% if @products.any? %>
