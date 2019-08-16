@@ -1,24 +1,42 @@
-# README
+# Mario's
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Probably the newest food fad.
 
-Things you may want to cover:
+#### By Sam Cook Created on August 16th, 2019.
 
-* Ruby version
+## Description
 
-* System dependencies
+ This program is a group project for the coding school, Epicodus. It was built to show that I have learned stuff in rails.
 
-* Configuration
+## Setup/Installation Requirements
 
-* Database creation
+* clone this repo `https://github.com/Onionator/freelance_project.git`
+* create a database from the database_backup.sql file by running `createdb [DATABASE NAME]` in the terminal followed by `psql [DATABASE_NAME] < database_backup.sql` and finally `createdb -T [DATABASE NAME]`
+* run `rails s` in the terminal
+* open a browser and go to localhost:3000
 
-* Database initialization
+## Known Bugs
 
-* How to run the test suite
+There are no known bugs at this time.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Support and contact details
 
-* Deployment instructions
+If you encounter any issues using this software, have comments or suggestions, or would like to support further projects please e-mail at:
 
-* ...
+* Sam Cook: whenpotatoesfry@gmail.com
+
+
+## Technologies Used
+
+* Ruby
+* HTML
+* javascript
+* Rails
+* CSS
+* Jquery
+
+### License
+
+This software is license under the MIT license.
+
+Copyright (c) 2019 **by: Sam Cook**
