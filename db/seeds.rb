@@ -1,7 +1,7 @@
 Product.destroy_all
 Review.destroy_all
 
-25.times do
+50.times do
   product = Product.create!(
     :name => Faker::Food.dish,
     :cost => rand(1.5...20).round(2),
