@@ -19,18 +19,23 @@ li {
 
 .navbar {
   background-color: #ec96a4;
+  border-radius: 5px;
   font-size: 40px;
   padding: 12px;
 }
 
+.lowerNav {
+
+}
+
 .lowerNavLink {
-  background-color: #7CCAF4;
-  border: 2px solid #131516;
+  border: 2px solid #ec96a4;
   border-radius: 5px;
   display: inline-flex;
-  max-width: 120px;
+  max-width: auto;
   padding: 5px;
   text-align: center;
+  color: #ec96a4;
 }
 
 .navbar a {
@@ -73,11 +78,17 @@ li {
   font-size: 20px;
   padding: 3px;
   padding-right: 5px;
-
 }
 
-.navSelect {
-  color: #9a9eab;
+#thisPage {
+  background-color: white;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 11px;
+}
+
+#selected {
+  color: #ec96a4;
 }
 
 #usa_products {

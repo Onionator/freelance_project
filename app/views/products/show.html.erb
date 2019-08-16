@@ -26,10 +26,6 @@
 <% end %>
 
 <div class="lowerNav">
-  <div class="lowerNavLink">
-    <%= link_to "Edit this product", edit_product_path %>
-  </div>
-  <div class="lowerNavLink">
-    <%= link_to "Leave a Review", new_product_review_path(@product.id) %>
-  </div>
+    <%= link_to "Edit this product", edit_product_path, class: 'lowerNavLink' %>
+    <%= link_to "Leave a Review", new_product_review_path(@product.id), class: 'lowerNavLink' %>
 </div>

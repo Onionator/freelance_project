@@ -15,5 +15,5 @@
   <%= f.submit %>
 <% end %>
 
-<%= link_to "Remove Review", product_review_path(@review.product_id, @review.id), :method => "delete" %>
-<%= link_to "Back to Review", product_review_path(@review.product_id, @review.id) %>
+<%= link_to "Remove Review", product_review_path(@review.product_id, @review.id), :method => "delete", class: 'lowerNavLink' %>
+<%= link_to "Back to Review", product_review_path(@review.product_id, @review.id), class: 'lowerNavLink' %>
