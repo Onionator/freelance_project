@@ -37,6 +37,6 @@ If you encounter any issues using this software, have comments or suggestions, o
 
 ### License
 
-This software is license under the MIT license.
+This software is licensed under the MIT license.
 
 Copyright (c) 2019 **by: Sam Cook**
