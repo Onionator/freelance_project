@@ -1,3 +1,7 @@
+//= require rails-ujs
+//= require activestorage
+//= require turbolinks
+//= require_tree .
 $(document).ready(function() {
   $('#usa_only').click(function(event) {
     $('#usa_products').toggle()

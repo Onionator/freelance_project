@@ -19,13 +19,16 @@ class ProductsController < ApplicationController
     end
   end
   def show
+    puts 'show active'
     @product = Product.find(params[:id])
   end
   def edit
+    puts 'edit active'
     @product = Product.find(params[:id])
     render :edit
   end
   def update
+    puts 'update active'
     @product = Product.find(params[:id])
     if @product.update(product_params)
       redirect_to product_path(@product.id)
@@ -34,8 +37,15 @@ class ProductsController < ApplicationController
     end
   end
   def destroy
+    puts 'destoy method active'
     @product = Product.find(params[:id])
-    @product.destroy!
+     if @product.destroy!
+      puts 'tried to destroy'
+      flash[:notice] = "Product deleted."
+     else
+      puts 'failed to destroy'
+      flash[:notice] = "Failure to delete product."
+     end
     redirect_to products_path
   end
   private
